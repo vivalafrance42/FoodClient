@@ -1,10 +1,18 @@
 <header>
-    <mat-toolbar color="primary">
-        <button mat-icon-button [routerLink]="['/']">
-          <mat-icon>home</mat-icon>
-        </button>
-  
-        <a mat-flat-button color="primary" [routerLink]="['/FoodPlaces']">FoodPlaces</a>
-        <span class="separator"></span>
-    </mat-toolbar>
-  </header> 
+  <mat-toolbar color="primary">
+      <button mat-icon-button [routerLink]="['/']">
+        <mat-icon>home</mat-icon>
+      </button>
+
+      <a mat-flat-button color="primary" [routerLink]="['/FoodPlaces']">Food Places</a>
+      <span class="separator"></span>
+      @if(isLoggedIn){
+        <a mat-flat-button color="primary" (click)="OnLogOut()">Log Out</a>
+      }
+      @else{
+        <a mat-flat-button color="primary" [routerLink]="['/login']">Login</a>
+      }
+      
+      
+  </mat-toolbar>
+</header> 

@@ -1,0 +1,25 @@
+<h1>Food Places</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Food Place</th>
+            <th>Place Initials (2)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (FoodPlace of FoodPlaces; track $index) {
+            <tr>
+                <td>
+                    <a [routerLink] = "['/FoodPlaceMenuItems', FoodPlace.foodPlaceId]">
+                        {{ FoodPlace.foodPlaceId }}
+                        <!-- <td>{{ FoodPlace.placeName }}</td> -->
+                    </a>
+                </td>
+                <td>{{ FoodPlace.placeName }}</td>
+                <td>{{ FoodPlace.placeInitials2 }}</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

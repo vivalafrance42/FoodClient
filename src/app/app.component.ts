@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
- import { HelloComponent } from "./hello/hello.component";
-import { HttpClientModule } from '@angular/common/http';
+import { HelloComponent } from "./hello/hello.component";
+// import { HttpClientModule } from '@angular/common/http';
 import { NavBarComponent } from "./nav-bar/nav-bar.component";
 
 
@@ -13,7 +13,8 @@ import { NavBarComponent } from "./nav-bar/nav-bar.component";
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.css',
-    imports: [RouterOutlet, HelloComponent, HttpClientModule, NavBarComponent]
+    imports: [RouterOutlet, HelloComponent, NavBarComponent]
+    // HttpClientModule,
 })
 export class AppComponent  {
 
